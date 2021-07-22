@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+    <title>To do's</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="title">to do's <i class="fas fa-pencil-alt" aria-hidden="true"></i></h1>
+    </header>
+    <main class="app">
+      <form autocomplete="off" class="form">
+        <input type="text" id="new-task" class="task-input" placeholder="new task" />
+        <button class="btn btn--new-task">add</button>
+      </form>
+      <ul class="tasks">
+        <!--<li class="task" data-id="123456">
+          <p class="task__text">lorem ipsum dolor</p>
+          <div class="task__btns">
+            <button class="btn btn--done" aria-label="Complete task"><i class="fas fa-check-square" aria-hidden="true"></i></button>
+            <button class="btn btn--delete" aria-label="Delete task"><i class="fas fa-trash-alt" aria-hidden="true"></i></button>
+          </div>
+        </li>-->
+      </ul>
+    </main>
+    <div class="btn-wrapper">
+      <button class="btn btn--reset">reset</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* GENERAL STYLES */
+
+:root {
+  --clr-primary: #6cbce9;
+  --clr-secondary: #81de9b;
+  --clr-primary-lighter: #6cbbe99d;
+  --clr-secondary-lighter: #81de9b85;
+
+  --border-radius: 0.5rem;
+  --padding: 0.8rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background: linear-gradient(180deg, #81de9b 0%, rgba(255, 255, 255, 0) 100%), #6cbce9;
+  background-repeat: no-repeat;
+}
+
+header {
+  text-align: center;
+  font-size: 2.1rem;
+  text-transform: uppercase;
+  padding: 2rem;
+}
+
+/* BUTTONS */
+
+.fas {
+  pointer-events: none;
+}
+
+.btn {
+  cursor: pointer;
+  background: none;
+  border-style: none;
+}
+
+.btn--new-task,
+.btn--reset {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  width: 9rem;
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+}
+
+.btn--new-task {
+  background-color: var(--clr-primary);
+}
+
+.btn--new-task:hover {
+  background-color: var(--clr-primary-lighter);
+}
+
+.btn-wrapper {
+  text-align: center;
+  margin-top: 2rem;
+  padding-bottom: 5rem;
+}
+
+.btn--reset {
+  background-color: var(--clr-secondary);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.btn--reset:hover {
+  background-color: var(--clr-secondary-lighter);
+}
+
+.task__btns {
+  display: flex;
+  flex-direction: row;
+  padding-left: var(--padding);
+}
+
+.btn--done,
+.btn--delete {
+  margin-right: 1.5rem;
+}
+
+.btn--done {
+  color: green;
+}
+
+.btn--done:hover {
+  color: rgb(127, 192, 127);
+}
+
+.btn--delete {
+  color: red;
+}
+
+.btn--delete:hover {
+  color: rgba(255, 0, 0, 0.445);
+}
+
+/* APP */
+
+.app {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  background-color: #f4f4f483;
+  animation: drop 1.5s ease;
+}
+
+.form {
+  padding: var(--padding);
+}
+
+.task-input {
+  font-family: "Poppins", sans-serif;
+  padding: var(--padding);
+  width: 50%;
+  margin-right: 1rem;
+  border-style: none;
+  border-radius: var(--border-radius);
+}
+
+.tasks {
+  height: 50vh;
+  padding: 1.5rem;
+  overflow: auto;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding);
+  min-height: fit-content;
+  min-width: fit-content;
+  margin-top: 0.5rem;
+  list-style: none;
+  border-radius: var(--border-radius);
+  background-color: white;
+  transition: all 0.5s;
+}
+
+.task__text {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  min-width: 50ch;
+  text-align: start;
+}
+
+/* class added with javascript */
+.task-complete {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/* ANIMATION */
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+  100% {
+    opacity: 1;
+    transform: 0;
+  }
+}
+
+/* not good in really small screens */
+@media only screen and (max-width: 1000px) {
+  .app {
+    width: 90%;
+  }
+
+  .task__text {
+    min-width: 25ch;
+  }
+}
